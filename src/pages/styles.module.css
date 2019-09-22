@@ -1,29 +1,21 @@
 /**
- * Copyright (c) 2017-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-/**
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
 
 .home {
-  text-align: center;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+	text-align: center;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
 .main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-@media screen and (max-width: 966px) {
-}
+@media screen and (max-width: 966px) {}
