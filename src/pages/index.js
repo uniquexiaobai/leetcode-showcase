@@ -3,7 +3,6 @@ import classnames from 'classnames';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import withBaseUrl from '@docusaurus/withBaseUrl';
 import styles from './styles.module.css';
 
 function Home() {
@@ -11,8 +10,8 @@ function Home() {
 	const { siteConfig = {} } = context;
 	return (
 		<Layout title={siteConfig.title} description={siteConfig.tagline}>
-			<div className={styles.home}>
-				<main className={styles.main}>
+			<div className={classnames(styles.home)}>
+				<main className={classnames(styles.main)}>
 					<h1 className='hero__title'>{siteConfig.title}</h1>
 					<p className='hero__subtitle'>{siteConfig.tagline}</p>
 				</main>
