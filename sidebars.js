@@ -4,6 +4,6 @@ console.log(guide.problems[0]);
 
 module.exports = {
 	docs: {
-		Docusaurus: ['doc1', ...guide.problems],
+		All: ['doc1', ...guide.problems],
 	},
 };

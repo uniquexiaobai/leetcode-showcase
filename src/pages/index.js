@@ -8,12 +8,26 @@ import styles from './styles.module.css';
 function Home() {
 	const context = useDocusaurusContext();
 	const { siteConfig = {} } = context;
+	const { customFields } = siteConfig;
+	const { user, progress } = customFields.guide;
+
 	return (
 		<Layout title={siteConfig.title} description={siteConfig.tagline}>
 			<div className={classnames(styles.home)}>
 				<main className={classnames(styles.main)}>
-					<h1 className='hero__title'>{siteConfig.title}</h1>
-					<p className='hero__subtitle'>{siteConfig.tagline}</p>
+					<h1 className='hero__title'>{`${user.user_name}'s Leetcode Solutions`}</h1>
+					<p className='hero__subtitle'>
+						This website presents all my accepted Leetcode
+						solutions. I've solved &nbsp;
+						<span className='text--primary'>
+							{progress.num_solved}
+						</span>
+						&nbsp;/&nbsp;
+						<span className='text--primary'>
+							{progress.num_total}
+						</span>{' '}
+						problems.
+					</p>
 				</main>
 
 				<footer className='footer footer--dark'>
@@ -21,7 +35,7 @@ function Home() {
 						<a className='footer__link-item' href='#'>
 							leetcode-viewer
 						</a>
-						powerd by Docusaurus
+						&nbsp; powerd by Docusaurus
 					</div>
 				</footer>
 			</div>

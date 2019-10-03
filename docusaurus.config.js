@@ -1,10 +1,8 @@
 const guide = require('./guide');
 
-const tagline = `${guide.user.user_name}'s leetcode solutions`;
-
 module.exports = {
 	title: 'Leetcode Showcase',
-	tagline: tagline,
+	tagline: 'leetcode showcase',
 	url: 'https://your-docusaurus-test-site.com',
 	baseUrl: '/',
 	favicon: 'img/favicon.ico',
@@ -40,4 +38,7 @@ module.exports = {
 			},
 		],
 	],
+	customFields: {
+		guide,
+	},
 };
