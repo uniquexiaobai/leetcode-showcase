@@ -12,10 +12,13 @@
     "clean": "rm docs/*.md & rm guide.json"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.24",
-    "@docusaurus/preset-classic": "^2.0.0-alpha.24",
+    "@docusaurus/core": "^2.0.0-alpha.25",
+    "@docusaurus/preset-classic": "^2.0.0-alpha.25",
     "@lokibai/leetcode-spider": "file:../../npm/leetcode-spider",
+    "@nivo/calendar": "^0.59.1",
+    "babel-polyfill": "^6.26.0",
     "classnames": "^2.2.6",
+    "date-fns": "^2.4.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
   },

@@ -3,13 +3,14 @@ import classnames from 'classnames';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Activity from '../components/activity';
 import styles from './styles.module.css';
 
 function Home() {
 	const context = useDocusaurusContext();
 	const { siteConfig = {} } = context;
 	const { customFields } = siteConfig;
-	const { user, progress } = customFields.guide;
+	const { user, progress, submissions } = customFields.guide;
 
 	return (
 		<Layout title={siteConfig.title} description={siteConfig.tagline}>
@@ -28,6 +29,8 @@ function Home() {
 						</span>{' '}
 						problems.
 					</p>
+
+					<Activity submissions={submissions} />
 				</main>
 
 				<footer className='footer footer--dark'>
