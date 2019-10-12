@@ -4,24 +4,13 @@ import { ResponsiveCalendar } from '@nivo/calendar';
 import { format, subYears } from 'date-fns';
 
 const formatData = (list) => {
+	const keys = Object.keys(list);
 	const getDay = (timestamp) =>
 		format(new Date(timestamp * 1000), 'yyyy-MM-dd');
-	const days = list.map((item) => getDay(item.timestamp));
-	const res = [];
-
-	days.reduce((obj, day) => {
-		if (!obj.day) {
-			obj.day = day;
-			obj.value = 1;
-		} else if (obj.day === day) {
-			obj.value += 1;
-		} else {
-			res.push({ ...obj });
-			obj.day = day;
-			obj.value = 1;
-		}
-		return obj;
-	}, {});
+	const res = keys.map((key) => ({
+		day: getDay(key),
+		value: list[key],
+	}));
 
 	return res;
 };
@@ -38,7 +27,7 @@ const Activity = ({ submissions }) => {
 				data={data}
 				from={from}
 				to={to}
-				domain={[1, 5]}
+				// domain={[1, 5]}
 				emptyColor='#ebedf0'
 				colors={['#c6e48b', '#7bc96f', '#239a3b', '#196127']}
 				monthBorderColor='#fff'
