@@ -13,9 +13,8 @@
     "upgrade": "npm i @docusaurus/core @docusaurus/preset-classic"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.26",
-    "@docusaurus/preset-classic": "^2.0.0-alpha.26",
-    "@lokibai/leetcode-spider": "file:../../npm/leetcode-spider",
+    "@docusaurus/core": "^2.0.0-alpha.33",
+    "@docusaurus/preset-classic": "^2.0.0-alpha.33",
     "@nivo/calendar": "^0.59.1",
     "babel-polyfill": "^6.26.0",
     "classnames": "^2.2.6",
