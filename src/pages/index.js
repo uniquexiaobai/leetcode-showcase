@@ -15,23 +15,17 @@ function Home() {
 	return (
 		<Layout title={siteConfig.title} description={siteConfig.tagline}>
 			<div className={classnames(styles.home)}>
-				<main className={classnames(styles.main)}>
+				<div className={classnames(styles.body)}>
 					<h1 className='hero__title'>{`${user.user_name}'s Leetcode Solutions`}</h1>
 					<p className='hero__subtitle'>
-						This website presents all my accepted Leetcode
-						solutions. I've solved &nbsp;
-						<span className='text--primary'>
-							{progress.num_solved}
-						</span>
+						This website presents all my accepted Leetcode solutions. I've solved &nbsp;
+						<span className='text--primary'>{progress.num_solved}</span>
 						&nbsp;/&nbsp;
-						<span className='text--primary'>
-							{progress.num_total}
-						</span>{' '}
-						problems.
+						<span className='text--primary'>{progress.num_total}</span> problems.
 					</p>
 
 					<Activity submissions={submissions} />
-				</main>
+				</div>
 
 				<footer className='footer footer--dark'>
 					<div className='text--center'>

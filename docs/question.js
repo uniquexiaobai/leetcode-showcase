@@ -14,7 +14,7 @@ const styles = {
 	question: {
 		paddingLeft: '20px',
 		borderLeft: '4px solid var(--ifm-color-primary)',
-		marginTop: '20px',
+		margin: '20px 0',
 	},
 };
 

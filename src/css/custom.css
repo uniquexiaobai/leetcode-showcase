@@ -15,11 +15,13 @@
 	--ifm-color-primary-lightest: rgb(146, 224, 208);
 }
 
-html,
-body {
-	height: 100%;
+header .docTitle {
+	margin-bottom: 0;
+	border: 1px solid red;
 }
 
-body > div {
-	height: 100%;
+@media only screen and (max-width: 996px) {
+	header .docTitle {
+		margin-bottom: 0;
+	}
 }

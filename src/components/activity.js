@@ -3,11 +3,10 @@ import 'babel-polyfill';
 import { ResponsiveCalendar } from '@nivo/calendar';
 import { format, subYears } from 'date-fns';
 
-const formatData = (list) => {
+const formatData = list => {
 	const keys = Object.keys(list);
-	const getDay = (timestamp) =>
-		format(new Date(timestamp * 1000), 'yyyy-MM-dd');
-	const res = keys.map((key) => ({
+	const getDay = timestamp => format(new Date(timestamp * 1000), 'yyyy-MM-dd');
+	const res = keys.map(key => ({
 		day: getDay(key),
 		value: list[key],
 	}));
