@@ -1,5 +1,7 @@
 # LeetCode Showcase
 
+[leetcode-spider](https://github.com/uniquexiaobai/leetcode-spider)
+
 ### Install
 ```bash
 npx @docusaurus/init@next init leetcode https://github.com/uniquexiaobai/leetcode-showcase
